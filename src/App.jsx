@@ -26,7 +26,7 @@ const profileData = {
   name: "Yabibal Zelalem",
   title: "Software Developer & IT Consultant",
   bio: "Highly motivated Software Developer with an MSc in Computer Science and an MBA. Expert in building robust full-stack applications and managing comprehensive IT systems. Focused on delivering solutions that integrate technical precision with strategic business insight.",
-  image: "https://placehold.co/200x200/4c1d95/fff?text=YZ",
+  image: "./assets/user.png",
   skills: {
     development: ["C#", "ASP.NET", "React", "JavaScript", "Python", "Java", "Node.js", "PHP"],
     systems: ["SQL Server", "MySQL", "Oracle", "SurveyCTO", "REST APIs", "Git", "System Admin"],
@@ -123,7 +123,8 @@ const Navbar = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Yabibal Z.
+          <image src={profileData.image} alt="Logo" className="inline-block w-10 h-10 rounded-full mr-2 align-middle" />
+          Yabibal Zelalem.
         </motion.a>
 
         {/* Desktop Menu */}
