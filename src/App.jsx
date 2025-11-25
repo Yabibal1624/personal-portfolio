@@ -26,7 +26,7 @@ const profileData = {
   name: "Yabibal Zelalem",
   title: "Software Developer & IT Consultant",
   bio: "Highly motivated Software Developer with an MSc in Computer Science and an MBA. Expert in building robust full-stack applications and managing comprehensive IT systems. Focused on delivering solutions that integrate technical precision with strategic business insight.",
-  image: "./assets/user.png",
+  image: "./user.png",
   skills: {
     development: [
       "C#",
@@ -160,9 +160,11 @@ const Navbar = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <div className="w-10 h-10 rounded-full bg-gradient-to-r from-teal-400 to-fuchsia-400 mr-2 flex items-center justify-center text-white font-bold">
-            YZ
-          </div>
+          <img
+            src={profileData.image}
+            alt="Yabibal Zelalem"
+            className="w-10 h-10 rounded-full mr-2 object-cover border-2 border-teal-400"
+          />
           <motion.a
             href="#home"
             className="logo text-2xl font-extrabold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-fuchsia-400 cursor-pointer"
@@ -218,7 +220,9 @@ const Navbar = () => {
       <motion.div
         className="md:hidden absolute top-full left-0 w-full bg-gray-900 shadow-xl overflow-hidden"
         initial={false}
-        animate={isOpen ? { opacity: 1, height: "auto" } : { opacity: 0, height: 0 }}
+        animate={
+          isOpen ? { opacity: 1, height: "auto" } : { opacity: 0, height: 0 }
+        }
         transition={{ duration: 0.3 }}
       >
         <ul className="flex flex-col p-4 space-y-2">
@@ -624,7 +628,7 @@ const Contact = () => {
     try {
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1500));
-      
+
       setFormStatus({
         submitting: false,
         success: true,
@@ -846,7 +850,8 @@ function App() {
         transition={{ duration: 0.6 }}
       >
         <p className="text-sm">
-          &copy; {new Date().getFullYear()} Yabibal Zelalem. All rights reserved.
+          &copy; {new Date().getFullYear()} Yabibal Zelalem. All rights
+          reserved.
         </p>
         <p className="text-xs pt-1 text-gray-600">
           Built with React, Tailwind CSS, & Framer Motion.
